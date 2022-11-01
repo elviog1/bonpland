@@ -23,6 +23,7 @@
             font-family: 'Inter', sans-serif;
             font-weight: 400;
             width: 100vw;
+            scroll-behavior: smooth;
         }
         body
         {
@@ -63,7 +64,7 @@
             width: 1.7rem;
             margin: 0 .2rem;
         }
-        section.maps > *:not(:first-child)
+        .inactive
         {
             display: none;
         }
@@ -166,14 +167,14 @@
     <div class="container-address">
         <section class="adresses">
             <h3>Branches</h3>
-            <p class="address-1">Av. del Libertador 1902, C1425 CABA</p>
-            <p class="address-2">Ituzaingó 5577 1642, San Isidro, Provincia de Buenos Aires</p>
-            <p class="address-3">25 de Mayo 218, B1878 Quilmes, Provincia de Buenos Aires</p>
+            <p id="address-1" class="address-1">Av. del Libertador 1902</p>
+            <p id="address-2" class="address-2">Ituzaingó 5577 1642</p>
+            <p id="address-3" class="address-3">25 de Mayo 218</p>
         </section>
         <section class="maps">
-            <img src="./images/Local1.png" alt="first local in Palermo" title="local by bonpland">
-            <img src="./images/Local2.png" alt="second local in Ituzaingó" title="local by bonpland">
-            <img src="./images/Local3.png" alt="third local in Quilmes" title="local by bonpland">
+            <img src="./images/Local1.png" class="maps_img-1" alt="first local in Palermo" title="local by bonpland">
+            <img src="./images/Local2.png" class="maps_img-2 inactive" alt="second local in Ituzaingó" title="local by bonpland">
+            <img src="./images/Local3.png" class="maps_img-3 inactive" alt="third local in Quilmes" title="local by bonpland">
         </section>
         <section class="info-map">
             <div class="info-map-text">
@@ -292,7 +293,60 @@
     </div>
 </article>
 <script>
+    const firstAddress = document.querySelector(".address-1"),
+        secondAddress = document.querySelector(".address-2"),
+        thirdAddress = document.querySelector(".address-3");
+        
+    const firstImage = document.querySelector(".maps_img-1"),
+         secondImage = document.querySelector(".maps_img-2"),
+         thirdImage = document.querySelector(".maps_img-3");
+    const infoLocals = 
+    {
+        local1: ["Av. del Libertador 1902, C1425 CABA", "www.localbonpland1.com.ar", "011 4444-4444"],
+        local2: ["Ituzaingó 5577 1642, San Isidro, Provincia de Buenos Aires", "www.localbonpland2.com.ar", "011 5555-5555"],
+        local3: ["25 de Mayo 218, B1878 Quilmes, Provincia de Buenos Aires", "www.localbonpland3.com.ar", "011 6666-6666"],
+    }
+    const infoTexts = Array.from(document.querySelectorAll(".info-map-text > p"));
+    const images = [firstImage, secondImage, thirdImage],
+        address = [firstAddress, secondAddress, thirdAddress];
+    const changingInfo = ({target}) =>
+    {
+        console.log()
+        if(target.id === "address-1")
+        {
+            if(!firstImage.classList.contains("inactive")) return;
+            if(!secondImage.classList.contains("inactive")) secondImage.classList.toggle("inactive");
+            if(!thirdImage.classList.contains("inactive")) thirdImage.classList.toggle("inactive");
+            firstImage.classList.toggle("inactive");
+            changeText(infoLocals.local1);
 
+        }
+        if(target.id === "address-2")
+        {
+            if(!secondImage.classList.contains("inactive")) return;
+            if(!firstImage.classList.contains("inactive")) firstImage.classList.toggle("inactive");
+            if(!thirdImage.classList.contains("inactive")) thirdImage.classList.toggle("inactive");
+            secondImage.classList.toggle("inactive");
+            changeText(infoLocals.local2);
+        }
+        if(target.id === "address-3")
+        {
+            if(!thirdImage.classList.contains("inactive")) return;
+            if(!secondImage.classList.contains("inactive")) secondImage.classList.toggle("inactive");
+            if(!firstImage.classList.contains("inactive")) firstImage.classList.toggle("inactive");
+            thirdImage.classList.toggle("inactive");
+            changeText(infoLocals.local3);
+        }
+    }
+    function changeText(infolocal)
+    {
+        for(let i = 0; i < infoTexts.length; i++)
+        {
+            infoTexts[i].textContent = infolocal[i];
+        }
+    }
+    
+    document.querySelector(".adresses").addEventListener("click", changingInfo);
 </script>
 
 </body>
