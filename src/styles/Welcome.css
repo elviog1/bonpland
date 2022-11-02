@@ -1,0 +1,30 @@
+.welcome-img{
+    object-fit: cover;
+    background-image: url("../../public/foto2.jpeg");
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.welcome-inputs{
+    width: 300px;
+}
+.welcome-inputs input{
+    border-radius: 8px;
+    padding: 10px 35px;
+    margin: 10px 0;
+    width: 100%;
+}
+.welcome-buttons{
+    display: flex;
+    justify-content: space-between;
+
+}
+.welcome-buttons button{
+    padding: 5px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
