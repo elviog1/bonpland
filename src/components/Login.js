@@ -16,9 +16,9 @@ export default function Login() {
         }
     }
   return (
-    <div className='d-flex justify-content-center mt-5'>
+    <div className='d-flex justify-content-center mt-5 login'>
         <form className='form-login p-5' onSubmit={login}>
-            <h2>Iniciar sesion</h2>
+            <h2 className='login-title'>Iniciar sesion</h2>
             <div className='d-flex flex-column'>
                 <label className='d-flex justify-content-start'>Correo</label>
                 <input className='login-input' type="email" name='email'/>
@@ -27,7 +27,7 @@ export default function Login() {
                 <label className='d-flex justify-content-start'>Contraseña</label>
                 <input className='login-input' type="password" name='password' />
             </div>
-            <div className='mt-3'>
+            <div className='mt-3 d-flex justify-content-center'>
                 <button className='btn-iniciar'>Iniciar</button>
             </div>
             <div className='login-o'>
