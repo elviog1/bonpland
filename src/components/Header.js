@@ -5,7 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 export default function Header() {
   return (
-    <div>
+
     <Navbar className='' bg="light" expand="lg">
       <Container >
         <Navbar.Brand href="#home">Bonpland</Navbar.Brand>
@@ -21,6 +21,6 @@ export default function Header() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    </div>
+
   )
 }
