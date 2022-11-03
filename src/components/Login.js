@@ -8,7 +8,7 @@ export default function Login() {
         e.preventDefault()
         const email = e.target.email.value
         const password = e.target.password.value
-        if(email == "banpland@gmail.com" && password == "test"){
+        if(email == "bonpland@gmail.com" && password == "test"){
             swAlert("Bienvenido", "Conexion exitosa", "success")
             navigate("/welcome")
         }else{
