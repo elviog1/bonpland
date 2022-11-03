@@ -1,0 +1,23 @@
+.inmueble-container{
+    display: flex;
+}
+.inmueble-info{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.inmueble-img{
+    width: 100%;
+}
+.inmueble-card{
+    max-width: 400px;
+}
+.inmueble-span{
+    background-color: rgb(182, 157, 157);
+    padding: 3px 25px;
+    border-radius: 5px;
+    
+}
+.inmueble-info-p, .inmueble-span{
+    font-weight: bold;
+}
