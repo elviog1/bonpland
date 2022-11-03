@@ -1,8 +1,11 @@
 import React from 'react'
+import InmuebleCard from '../components/InmuebleCard'
 import '../styles/Welcome.css'
 export default function Welcome() {
   return (
-      <div className='welcome-img'>
+    <>
+      <div className='welcome-img container flex-column'>
+        <h1 className='title'>BONPLAND</h1>
         <div className='welcome-inputs'>
           <input type="search" />
             <div className='welcome-buttons'>
@@ -12,5 +15,10 @@ export default function Welcome() {
             </div>
           </div>
       </div>
+      <div className='d-flex flex-wrap gap-3 justify-content-center'>
+        <InmuebleCard />
+        
+      </div>
+    </>
   )
 }
