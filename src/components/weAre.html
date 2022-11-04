@@ -11,13 +11,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            overflow-x: unset;
+            overflow-x: hidden;
 
         }
         html
         {
             font-size: 16px;
-            font-family: sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
             width: 100%;
             min-width: 320px;
         }
@@ -35,99 +35,153 @@
         {
             display: flex;
             flex-direction: column;
-            
             width: 100%;
         }
-        li
+        p
         {
-            list-style-type: none;
+            padding: .3rem 0;
         }
         section.maps
         {
             width: 100%;
         }
-        .maps > div
+        img
         {
             width: 100%;
-            height: 20rem;
         }
-    
+       
+        .icon
+        {
+            width: 1.4em;
+        }
+        section.maps > *:not(:first-child)
+        {
+            display: none;
+        }
+        .info-map-text
+        {
+            display: flex;
+        }
+        .profile-card
+        {
+            text-align: center;
+            background: rgb(232,232,241);
+            background: linear-gradient(180deg, rgba(232,232,241,1) 9%, rgba(97,53,204,0.8020395658263305) 70%);
+        }
+        .profile-card > img:not(img[class="icon"])
+        {
+            border-radius: .5rem;
+        }
 
     </style>
 </head>
-<body onload="mapInit()">
+<body>
 <article class="Locals">
-    <h2>Locals</h2>
+    <h2>We have branches all over the country</h2>
     <div class="container-address">
         <section class="adresses">
-            <ul>
-                <li class="address-1">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-                <li class="address-2">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-                <li class="address-3">Lorem ipsum, dolor sit amet consectetur adipisicing.</li>
-            </ul>
+            <p class="address-1">Av. del Libertador 1902, C1425 CABA</p>
+            <p class="address-2">Ituzaingó 5577 1642, San Isidro, Provincia de Buenos Aires</p>
+            <p class="address-3">25 de Mayo 218, B1878 Quilmes, Provincia de Buenos Aires</p>
         </section>
         <section class="maps">
             <img src="./images/Local1.png" alt="first local in Palermo" title="local by bonpland">
-            <img src="./images/Local2.png" alt="first local in Palermo" title="local by bonpland">
-            <img src="./images/Local3.png" alt="first local in Palermo" title="local by bonpland">
+            <img src="./images/Local2.png" alt="second local in Ituzaingó" title="local by bonpland">
+            <img src="./images/Local3.png" alt="third local in Quilmes" title="local by bonpland">
         </section>
         <section class="info-map">
-            <p class="info-map-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, natus!</p>
-            <p class="info-map-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, natus!</p>
-            <p class="info-map-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, natus!</p>
-            <p class="info-map-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, natus!</p>
+            <div class="info-map-text">
+                <img src="./icons/map-pin.svg" class="icon">
+                <p> Av. del Libertador 1902, C1425 CABA</p>
+            </div>
+            <div class="info-map-text">
+                <img src="./icons/globe.svg" class="icon">
+                <p>www.localbonpland1.com.ar</p>
+                </div>
+            <div class="info-map-text">
+                <img src="./icons/phone.svg" class="icon">
+                <p>011 4444-4444</p>
+            </div>
+            
         </section>
     </div>
 </article>
 <article class="about-us">
     <h2>About Us</h2>
     <section class="profile-card">
-        <img src="#">
-        <h3>Name</h3>
+        <img src="https://source.unsplash.com/user/c_v_r/40x40">
+        <h3>Jean Jacques</h3>
         <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis repellat ratione consequuntur ab ad! Cupiditate
-            voluptatum at dolorem!
+            Quis cupiditate corporis
         </p>
+        <div class="social-media">
+            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+            <a href="#"><img class="icon" src="./icons/github.svg"></a>
+            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+        </div>
     </section>
     <section class="profile-card">
-        <img src="#">
-        <h3>Name</h3>
+        <img src="https://source.unsplash.com/user/c_v_r/40x40">
+        <h3>Jean Jacques</h3>
         <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis repellat ratione consequuntur ab ad! Cupiditate
-            voluptatum at dolorem!
+            Quis cupiditate corporis
         </p>
+        <div class="social-media">
+            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+            <a href="#"><img class="icon" src="./icons/github.svg"></a>
+            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+        </div>
     </section>
     <section class="profile-card">
-        <img src="#">
-        <h3>Name</h3>
+        <img src="https://source.unsplash.com/user/c_v_r/40x40">
+        <h3>Jean Jacques</h3>
         <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis repellat ratione consequuntur ab ad! Cupiditate
-            voluptatum at dolorem!
+            Quis cupiditate corporis
         </p>
+        <div class="social-media">
+            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+            <a href="#"><img class="icon" src="./icons/github.svg"></a>
+            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+        </div>
     </section>
     <section class="profile-card">
-        <img src="#">
-        <h3>Name</h3>
+        <img src="https://source.unsplash.com/user/c_v_r/40x40">
+        <h3>Jean Jacques</h3>
         <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis repellat ratione consequuntur ab ad! Cupiditate
-            voluptatum at dolorem!
+            Quis cupiditate corporis
         </p>
+        <div class="social-media">
+            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+            <a href="#"><img class="icon" src="./icons/github.svg"></a>
+            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+        </div>
     </section>
     <section class="profile-card">
-        <img src="#">
-        <h3>Name</h3>
+        <img src="https://source.unsplash.com/user/c_v_r/40x40">
+        <h3>Jean Jacques</h3>
         <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis repellat ratione consequuntur ab ad! Cupiditate
-            voluptatum at dolorem!
+            Quis cupiditate corporis
         </p>
-    </section>
-    <section class="profile-card">
-        <img src="#">
-        <h3>Name</h3>
-        <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis repellat ratione consequuntur ab ad! Cupiditate
-            voluptatum at dolorem!
-        </p>
+        <div class="social-media">
+            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+            <a href="#"><img class="icon" src="./icons/github.svg"></a>
+            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+        </div>
     </section>
 </article>
 <script>
