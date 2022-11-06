@@ -29,7 +29,7 @@
             width: 90%;
             margin-left: auto;
             margin-right: auto;
-            background-color: #7d94b5;
+            background-color: rgba(247, 222, 214, 0.53);
         }
         
         h2
@@ -63,8 +63,8 @@
        
         .icon
         {
-            width: 1.4rem;
-            margin: 0 .4rem;
+            width: 1.7rem;
+            margin: 0 .2rem;
         }
         section.maps > *:not(:first-child)
         {
@@ -73,7 +73,10 @@
         .info-map-text
         {
             display: flex;
+            margin: .4rem 0;
         }
+        
+        
         .info-map
         {
             background-color: rgba(16 18 27 / 20%);
@@ -83,17 +86,56 @@
         .profile-card
         {
             text-align: center;
-            background-color: rgba(16 18 27 / 20%);
+            background-color: rgba(195, 197, 194, 0.705);
             border-radius: .3rem;
             margin: 1rem 0;
             padding: .4rem;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
         }
+        .social-media
+        {
+            margin-top: auto;
+        }
+        
         .profile-card > img:not(img[class="icon"])
         {
             border-radius: 50%;
             width: 50%;
+            border: 2px solid #fff;
+        }
+        @media screen and (min-width: 480px)
+        {
+            
+            .container-profile-cards
+            {
+                display: flex;
+                flex-flow: row wrap;
+                gap: .8rem;
+            }
+            .profile-card
+            {
+                width: 48%;
+                margin: 0;
+            }
+            
         }
 
+        @media screen and (min-width: 720px)
+        {
+            .container-address
+            {   flex-flow: row wrap;
+                width: 100%;
+                justify-content: flex-end;
+                gap: 0 .7rem;
+
+            }
+            .container-address section
+            {
+                width: 48%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -129,85 +171,102 @@
 </article>
 <article class="about-us">
     <h2>About Us</h2>
-    <section class="profile-card">
-        <img src="https://source.unsplash.com/user/c_v_r/40x40">
-        <h3>Jean Jacques</h3>
-        <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis
-        </p>
-        <div class="social-media">
-            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
-            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
-            <a href="#"><img class="icon" src="./icons/github.svg"></a>
-            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
-            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
-            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
-        </div>
-    </section>
-    <section class="profile-card">
-        <img src="https://source.unsplash.com/user/c_v_r/40x40">
-        <h3>Jean Jacques Rosseau</h3>
-        <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-            Non consequuntur illum, perferendis quaerat molestiae ipsum 
-            placeat sequi ipsa tempora culpa quam et! Et asperiores ad adipisci
-            reprehenderit labore recusandae deleniti.
-        </p>
-        <div class="social-media">
-            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
-            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
-            <a href="#"><img class="icon" src="./icons/github.svg"></a>
-            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
-            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
-            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
-        </div>
-    </section>
-    <section class="profile-card">
-        <img src="https://source.unsplash.com/user/c_v_r/40x40">
-        <h3>Jean Jacques</h3>
-        <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis
-        </p>
-        <div class="social-media">
-            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
-            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
-            <a href="#"><img class="icon" src="./icons/github.svg"></a>
-            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
-            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
-            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
-        </div>
-    </section>
-    <section class="profile-card">
-        <img src="https://source.unsplash.com/user/c_v_r/40x40">
-        <h3>Jean Jacques</h3>
-        <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis
-        </p>
-        <div class="social-media">
-            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
-            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
-            <a href="#"><img class="icon" src="./icons/github.svg"></a>
-            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
-            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
-            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
-        </div>
-    </section>
-    <section class="profile-card">
-        <img src="https://source.unsplash.com/user/c_v_r/40x40">
-        <h3>Jean Jacques</h3>
-        <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Quis cupiditate corporis
-        </p>
-        <div class="social-media">
-            <a href="#"><img class="icon" src="./icons/mail.svg"></a>
-            <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
-            <a href="#"><img class="icon" src="./icons/github.svg"></a>
-            <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
-            <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
-            <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
-        </div>
-    </section>
+    <div class="container-profile-cards">
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques Rosseau</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Non consequuntur illum, perferendis quaerat molestiae ipsum 
+                placeat sequi ipsa tempora culpa quam et! Et asperiores ad adipisci
+                reprehenderit labore recusandae deleniti.
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+    </div>
 </article>
 <script>
 
