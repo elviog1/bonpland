@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>We Are</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
     <style>
         *
         {
@@ -17,19 +20,23 @@
         html
         {
             font-size: 16px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            width: 100%;
-            min-width: 320px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            width: 100vw;
         }
         body
         {
-            background-color: aquamarine;
-            width: 95%;
-            padding: 0 1em;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #7d94b5;
         }
+        
         h2
         {
             text-align: center;
+            margin: .5rem 0;
+            font-weight: 800;
         }
         .container-address
         {
@@ -40,6 +47,10 @@
         p
         {
             padding: .3rem 0;
+        }
+        section
+        {
+            margin: .4rem 0;
         }
         section.maps
         {
@@ -52,7 +63,8 @@
        
         .icon
         {
-            width: 1.4em;
+            width: 1.4rem;
+            margin: 0 .4rem;
         }
         section.maps > *:not(:first-child)
         {
@@ -62,15 +74,24 @@
         {
             display: flex;
         }
+        .info-map
+        {
+            background-color: rgba(16 18 27 / 20%);
+            padding: .4rem;
+            border-radius: .1rem;
+        }
         .profile-card
         {
             text-align: center;
-            background: rgb(232,232,241);
-            background: linear-gradient(180deg, rgba(232,232,241,1) 9%, rgba(97,53,204,0.8020395658263305) 70%);
+            background-color: rgba(16 18 27 / 20%);
+            border-radius: .3rem;
+            margin: 1rem 0;
+            padding: .4rem;
         }
         .profile-card > img:not(img[class="icon"])
         {
-            border-radius: .5rem;
+            border-radius: 50%;
+            width: 50%;
         }
 
     </style>
@@ -125,9 +146,13 @@
     </section>
     <section class="profile-card">
         <img src="https://source.unsplash.com/user/c_v_r/40x40">
-        <h3>Jean Jacques</h3>
+        <h3>Jean Jacques Rosseau</h3>
         <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Quis cupiditate corporis
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Non consequuntur illum, perferendis quaerat molestiae ipsum 
+            placeat sequi ipsa tempora culpa quam et! Et asperiores ad adipisci
+            reprehenderit labore recusandae deleniti.
         </p>
         <div class="social-media">
             <a href="#"><img class="icon" src="./icons/mail.svg"></a>
