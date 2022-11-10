@@ -44,6 +44,7 @@
             flex-direction: column;
             width: 100%;
         }
+        
         p
         {
             padding: .3rem 0;
@@ -52,11 +53,7 @@
         {
             margin: .4rem 0;
         }
-        section.maps
-        {
-            width: 100%;
-        }
-        img
+        section.maps, img
         {
             width: 100%;
         }
@@ -70,12 +67,18 @@
         {
             display: none;
         }
-        .info-map-text
+        .info-map-text 
         {
             display: flex;
-            margin: .4rem 0;
         }
-        
+        .info-map-text img
+        {
+            flex-shrink: 0;
+        }
+        .info-map-text p
+        {
+            word-wrap: break-word;
+        }
         
         .info-map
         {
@@ -83,12 +86,18 @@
             padding: .4rem;
             border-radius: .1rem;
         }
+        .container-profile-cards
+        {
+            display: flex;
+            flex-flow: row wrap;
+            gap: .3rem;
+        }
         .profile-card
         {
             text-align: center;
             background-color: rgba(195, 197, 194, 0.705);
             border-radius: .3rem;
-            margin: 1rem 0;
+            width: 100%;
             padding: .4rem;
             display: flex;
             flex-flow: column nowrap;
@@ -97,6 +106,7 @@
         .social-media
         {
             margin-top: auto;
+            display: flex;
         }
         
         .profile-card > img:not(img[class="icon"])
@@ -113,11 +123,13 @@
                 display: flex;
                 flex-flow: row wrap;
                 gap: .8rem;
+                justify-content: center;
             }
             .profile-card
             {
                 width: 48%;
                 margin: 0;
+                flex-grow: 1;
             }
             
         }
@@ -131,11 +143,21 @@
                 gap: 0 .7rem;
 
             }
-            .container-address section
+            .container-address > section
             {
-                width: 48%;
+                width: 70%;
+            }
+            section.adresses
+            {
+                width: 28%;
+            }
+            .profile-card
+            {
+                flex-basis: 20rem;
+                margin: 0;
             }
         }
+       
     </style>
 </head>
 <body>
@@ -143,6 +165,7 @@
     <h2>We have branches all over the country</h2>
     <div class="container-address">
         <section class="adresses">
+            <h3>Branches</h3>
             <p class="address-1">Av. del Libertador 1902, C1425 CABA</p>
             <p class="address-2">Ituzaingó 5577 1642, San Isidro, Provincia de Buenos Aires</p>
             <p class="address-3">25 de Mayo 218, B1878 Quilmes, Provincia de Buenos Aires</p>
@@ -170,7 +193,7 @@
     </div>
 </article>
 <article class="about-us">
-    <h2>About Us</h2>
+    <h2>We are</h2>
     <div class="container-profile-cards">
         <section class="profile-card">
             <img src="https://source.unsplash.com/user/c_v_r/720x720">
