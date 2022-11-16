@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We Are</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+
+        }
+        html
+        {
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            width: 100vw;
+            scroll-behavior: smooth;
+        }
+        body
+        {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: rgba(247, 222, 214, 0.53);
+        }
+        
+        h2
+        {
+            text-align: center;
+            margin: .5rem 0;
+            font-weight: 800;
+        }
+        .container-address
+        {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
+        p
+        {
+            padding: .3rem 0;
+        }
+        section
+        {
+            margin: .4rem 0;
+        }
+        section.maps, img
+        {
+            width: 100%;
+        }
+       
+        .icon
+        {
+            width: 1.7rem;
+            margin: 0 .2rem;
+        }
+        .inactive
+        {
+            display: none;
+        }
+        .info-map-text 
+        {
+            display: flex;
+        }
+        .info-map-text img
+        {
+            flex-shrink: 0;
+        }
+        .info-map-text p
+        {
+            word-wrap: break-word;
+        }
+        
+        .info-map
+        {
+            background-color: rgba(16 18 27 / 20%);
+            padding: .4rem;
+            border-radius: .1rem;
+        }
+        .container-profile-cards
+        {
+            display: flex;
+            flex-flow: row wrap;
+            gap: .3rem;
+        }
+        .profile-card
+        {
+            text-align: center;
+            background-color: rgba(195, 197, 194, 0.705);
+            border-radius: .3rem;
+            width: 100%;
+            padding: .4rem;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+        .social-media
+        {
+            margin-top: auto;
+            display: flex;
+        }
+        
+        .profile-card > img:not(img[class="icon"])
+        {
+            border-radius: 50%;
+            width: 50%;
+            border: 2px solid #fff;
+        }
+        @media screen and (min-width: 480px)
+        {
+            
+            .container-profile-cards
+            {
+                display: flex;
+                flex-flow: row wrap;
+                gap: .8rem;
+                justify-content: center;
+            }
+            .profile-card
+            {
+                width: 48%;
+                margin: 0;
+                flex-grow: 1;
+            }
+            
+        }
+
+        @media screen and (min-width: 720px)
+        {
+            .container-address
+            {   flex-flow: row wrap;
+                width: 100%;
+                justify-content: flex-end;
+                gap: 0 .7rem;
+
+            }
+            .container-address > section
+            {
+                width: 70%;
+            }
+            section.adresses
+            {
+                width: 28%;
+            }
+            .profile-card
+            {
+                flex-basis: 20rem;
+                margin: 0;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+<article class="Locals">
+    <h2>We have branches all over the country</h2>
+    <div class="container-address">
+        <section class="adresses">
+            <h3>Branches</h3>
+            <p id="address-1" class="address-1">Av. del Libertador 1902</p>
+            <p id="address-2" class="address-2">Ituzaingó 5577 1642</p>
+            <p id="address-3" class="address-3">25 de Mayo 218</p>
+        </section>
+        <section class="maps">
+            <img src="./images/Local1.png" class="maps_img-1" alt="first local in Palermo" title="local by bonpland">
+            <img src="./images/Local2.png" class="maps_img-2 inactive" alt="second local in Ituzaingó" title="local by bonpland">
+            <img src="./images/Local3.png" class="maps_img-3 inactive" alt="third local in Quilmes" title="local by bonpland">
+        </section>
+        <section class="info-map">
+            <div class="info-map-text">
+                <img src="./icons/map-pin.svg" class="icon">
+                <p> Av. del Libertador 1902, C1425 CABA</p>
+            </div>
+            <div class="info-map-text">
+                <img src="./icons/globe.svg" class="icon">
+                <p>www.localbonpland1.com.ar</p>
+                </div>
+            <div class="info-map-text">
+                <img src="./icons/phone.svg" class="icon">
+                <p>011 4444-4444</p>
+            </div>
+            
+        </section>
+    </div>
+</article>
+<article class="about-us">
+    <h2>We are</h2>
+    <div class="container-profile-cards">
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques Rosseau</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                Non consequuntur illum, perferendis quaerat molestiae ipsum 
+                placeat sequi ipsa tempora culpa quam et! Et asperiores ad adipisci
+                reprehenderit labore recusandae deleniti.
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+        <section class="profile-card">
+            <img src="https://source.unsplash.com/user/c_v_r/720x720">
+            <h3>Jean Jacques</h3>
+            <p class="resume">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Quis cupiditate corporis
+            </p>
+            <div class="social-media">
+                <a href="#"><img class="icon" src="./icons/mail.svg"></a>
+                <a href="#"><img class="icon" src="./icons/linkedin.svg"></a>
+                <a href="#"><img class="icon" src="./icons/github.svg"></a>
+                <a href="#"><img class="icon" src="./icons/facebook.svg"></a>
+                <a href="#"><img class="icon" src="./icons/twitter.svg"></a>
+                <a href="#"><img class="icon" src="./icons/instagram.svg"></a>
+            </div>
+        </section>
+    </div>
+</article>
+<script>
+    const firstAddress = document.querySelector(".address-1"),
+        secondAddress = document.querySelector(".address-2"),
+        thirdAddress = document.querySelector(".address-3");
+        
+    const firstImage = document.querySelector(".maps_img-1"),
+         secondImage = document.querySelector(".maps_img-2"),
+         thirdImage = document.querySelector(".maps_img-3");
+    const infoLocals = 
+    {
+        local1: ["Av. del Libertador 1902, C1425 CABA", "www.localbonpland1.com.ar", "011 4444-4444"],
+        local2: ["Ituzaingó 5577 1642, San Isidro, Provincia de Buenos Aires", "www.localbonpland2.com.ar", "011 5555-5555"],
+        local3: ["25 de Mayo 218, B1878 Quilmes, Provincia de Buenos Aires", "www.localbonpland3.com.ar", "011 6666-6666"],
+    }
+    const infoTexts = Array.from(document.querySelectorAll(".info-map-text > p"));
+    const images = [firstImage, secondImage, thirdImage],
+        address = [firstAddress, secondAddress, thirdAddress];
+    const changingInfo = ({target}) =>
+    {
+        console.log()
+        if(target.id === "address-1")
+        {
+            if(!firstImage.classList.contains("inactive")) return;
+            if(!secondImage.classList.contains("inactive")) secondImage.classList.toggle("inactive");
+            if(!thirdImage.classList.contains("inactive")) thirdImage.classList.toggle("inactive");
+            firstImage.classList.toggle("inactive");
+            changeText(infoLocals.local1);
+
+        }
+        if(target.id === "address-2")
+        {
+            if(!secondImage.classList.contains("inactive")) return;
+            if(!firstImage.classList.contains("inactive")) firstImage.classList.toggle("inactive");
+            if(!thirdImage.classList.contains("inactive")) thirdImage.classList.toggle("inactive");
+            secondImage.classList.toggle("inactive");
+            changeText(infoLocals.local2);
+        }
+        if(target.id === "address-3")
+        {
+            if(!thirdImage.classList.contains("inactive")) return;
+            if(!secondImage.classList.contains("inactive")) secondImage.classList.toggle("inactive");
+            if(!firstImage.classList.contains("inactive")) firstImage.classList.toggle("inactive");
+            thirdImage.classList.toggle("inactive");
+            changeText(infoLocals.local3);
+        }
+    }
+    function changeText(infolocal)
+    {
+        for(let i = 0; i < infoTexts.length; i++)
+        {
+            infoTexts[i].textContent = infolocal[i];
+        }
+    }
+    
+    document.querySelector(".adresses").addEventListener("click", changingInfo);
+</script>
+
+</body>
+</html>
